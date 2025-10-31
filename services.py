@@ -134,7 +134,7 @@ async def check_domain_availability_ninjas(domains: List[str]) -> List[str]:
                 if resp.status_code == 200:
                     data = resp.json()
                     # The API returns "is_registered": True/False
-                    print(f"Response data for {domain}: {data} ${data.get("available", False)}")
+                    print(f"Response data for {domain}: {data} ${data.get('available', False)}")
                     if data.get("available", False):
                         available.append(domain)
                 else:
